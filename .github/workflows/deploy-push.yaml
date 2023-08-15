@@ -68,7 +68,7 @@ jobs:
         id: extract_params
 
       # add more data models like this:
-      - name: Deploy data model
+      - name: Deploy data model Ice-Cream
         if: ${{ contains(needs.generate-matrix.outputs.deploy_folders, matrix.datamodel) }}
         uses: cognitedata/datamodel-action@v1
         with:
