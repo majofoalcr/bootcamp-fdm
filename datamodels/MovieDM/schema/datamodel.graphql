@@ -1,28 +1,45 @@
-type Actor implements Person {
-  name: String!
-  age: Int
-  didWinOscar: Boolean
-}
-
-type Director implements Person {
-  name: String!
-  age: Int
-  didWinOscar: Boolean
-}
-
-interface Person {
-  name: String!
-  age: Int
-}
-
-type Movie {
-  name: String!
+type Site {
   description: String
-  watchedIt: Boolean
-  imdbRating: Float
-  releasedYear: Int
-  gross: Int
-  runTime: Int
-  director: Director
-  actors: [Actor]
+  name: String
+  metadata: String
+  areas: [Area]
+}
+
+type Area {
+  name: String
+  metadata: String
+  process_cells: [Process_cell]
+  production_lines: [Production_line]
+  storage_zones: [Storage_zone]
+  units: [Unit]
+}
+
+type Storage_zone {
+  name: String
+  metadata: String
+}
+
+type Process_cell {
+  name: String
+  metadata: String
+  units: [Unit]
+}
+
+type Equipment_module {
+  name: String
+  metadata: String
+}
+
+type Production_line {
+  name: String
+  metadata: String
+  units: [Unit]
+}
+
+type Unit {
+  name: String
+  metadata: String
+  equipment_module: [Equipment_module]
+  units : [Unit]
+  ts_unit: [TimeSeries]
 }
