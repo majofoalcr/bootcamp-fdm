@@ -50,7 +50,7 @@ action: upsert # Optional, default: upsert
 
 # List of email adresses to send emails to on transformation errors
 notifications: # Optional, default: null
-  - example1@cognite.com
+  - maria.fonseca@cognite.com
   - example2@cognite.com
 
 authentication:
