@@ -82,7 +82,7 @@ jobs:
           space: ${{ steps.extract_params.outputs.space }}
           project: ${{ vars.COGNITE_PROJECT }}
           version: ${{ steps.extract_params.outputs.version }}
-          scopes: https://${{ vars.COGNITE_CLUSTER }}.cognitedata.com/.default
+          scopes: https://westeurope-1.cognitedata.com/.default
           #audience: ${{ vars.COGNITE_AUDIENCE }} # non AAD
 
       - name: Replace vars in transformations
