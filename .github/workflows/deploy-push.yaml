@@ -9,7 +9,7 @@ jobs:
   generate-matrix:
     uses: "./.github/workflows/generate-matrix.yaml"
     with:
-      deploy_folders: "MovieDM"
+      deploy_folders: "IceCream"
       trigger_deploy_all_folders: "common"
 
   deploy:
